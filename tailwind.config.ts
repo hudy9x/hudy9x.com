@@ -15,6 +15,11 @@ const config: Config = {
       },
       animation: {
         "fade-in": "fade-in 3s ease-in-out forwards",
+        "fade-in-500": "fade-in 0.5s ease-in-out forwards",
+        "fade-in-700": "fade-in 0.7s ease-in-out forwards",
+        "fade-in-1000": "fade-in 1s ease-in-out forwards",
+        "fade-in-1500": "fade-in 1.5s ease-in-out forwards",
+        "fade-in-2000": "fade-in 2s ease-in-out forwards",
         "fade-left": "fade-left 3s ease-in-out forwards",
         "fade-right": "fade-right 3s ease-in-out forwards",
       },

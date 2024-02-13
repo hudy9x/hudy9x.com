@@ -16,7 +16,7 @@ export default function Home() {
             <Link
               key={item.href}
               href={item.href}
-              className="text-xl duration-500 text-zinc-500 hover:text-zinc-300"
+              className="uppercase duration-500 text-zinc-500 hover:text-zinc-300"
             >
               {item.name}
             </Link>
@@ -24,14 +24,15 @@ export default function Home() {
         </ul>
       </nav>
       <Particles
-        className="absolute inset-0 -z-10 animate-fade-in"
+        className="absolute inset-0 -z-10 animate-fade-in-1000"
         quantity={100}
       />
-      <h1 className="z-10 font-extrabold text-4xl text-transparent duration-1000 bg-white cursor-default text-edge-outline font-display sm:text-6xl md:text-9xl whitespace-nowrap bg-clip-text">
+      <h1 className=" animate-fade-in-2000 z-10 font-extrabold text-4xl text-transparent duration-1000 bg-white cursor-default text-edge-outline font-display sm:text-6xl md:text-9xl whitespace-nowrap bg-clip-text">
         hudy9x
       </h1>
 
       <div className="my-16 text-center animate-fade-in">
+        <h2 className="text-xl text-zinc-500 ">I speak web languages. Turning ideas into apps for customers and myself. Always coding, always learning.</h2>
         <h2 className="text-xl text-zinc-500 ">
           {"I'm building "}
           <Link
