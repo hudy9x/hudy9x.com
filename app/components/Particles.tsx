@@ -38,14 +38,17 @@ export default function Particles({
     return () => {
       window.removeEventListener("resize", initCanvas);
     };
+    // eslint-disable-next-line
   }, []);
 
   useEffect(() => {
     onMouseMove();
+    // eslint-disable-next-line
   }, [mousePosition.x, mousePosition.y]);
 
   useEffect(() => {
     initCanvas();
+    // eslint-disable-next-line
   }, [refresh]);
 
   const initCanvas = () => {
