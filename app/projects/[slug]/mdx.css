@@ -1,5 +1,5 @@
 .article {
-  @apply w-[550px] px-4 py-12 mx-auto text-zinc-800 space-y-6;
+  @apply  sm:w-[550px] px-8 sm:px-4 py-12 mx-auto text-zinc-700 space-y-6;
 
   h2{
     @apply text-2xl font-semibold;
