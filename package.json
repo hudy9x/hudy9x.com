@@ -6,7 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "push": "git push",
+    "push": "yarn build && git push",
     "lint": "next lint"
   },
   "dependencies": {
