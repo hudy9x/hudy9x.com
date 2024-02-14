@@ -7,7 +7,7 @@ const jost = Jost({ subsets: ['latin'] })
 const outfit = Outfit({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: "Hudy9x - A web developer who traveling to start my own personal business with coding skills.",
+  title: "Hudy9x - A web developer who traveling to app places.",
   description: "Hi ! It's hudy here. As you may know I speak web languages. Love to turn ideas into apps for customers and myself. Keep coding, keep learning. Find me on ",
 };
 
