@@ -1,0 +1,23 @@
+.article {
+  @apply w-[550px] px-4 py-12 mx-auto text-zinc-800 space-y-6;
+
+  h2{
+    @apply text-2xl font-semibold;
+  }
+
+  p img {
+    @apply block mx-auto
+  }
+
+  a {
+    @apply underline text-zinc-700 hover:text-zinc-800
+  }
+
+  ul {
+    list-style: circle;
+    @apply pl-6 space-y-3;
+  }
+}
+
+
+

@@ -2,7 +2,7 @@
 import { notFound } from "next/navigation";
 import { allProjects } from "contentlayer/generated";
 import { Header } from "./header";
-// import "./mdx.css";
+import "./mdx.css";
 import { ReportView } from "./view";
 import { Redis } from "@upstash/redis";
 
@@ -40,7 +40,7 @@ export default async function PostPage({ params }: Props) {
       <Header project={project} views={views} />
       <ReportView slug={project.slug} />
 
-      <article className="px-4 py-12 mx-auto prose prose-zinc prose-quoteless" dangerouslySetInnerHTML={{ __html: project.body.html }}>
+      <article className="article" dangerouslySetInnerHTML={{ __html: project.body.html }}>
         {/* <Mdx code={project.body} /> */}
       </article>
     </div>
