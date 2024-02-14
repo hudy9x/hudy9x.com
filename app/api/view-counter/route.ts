@@ -24,7 +24,7 @@ export async function POST(req: NextRequest): Promise<NextResponse> {
   if (!slug) {
     return new NextResponse("Slug not found", { status: 400 });
   }
-  const ip = req.ip;
+  const ip = req.headers.get('x-forwarded-for');
   console.log('ip address', ip)
   if (ip) {
     // Hash the IP in order to not store it directly in your db.
