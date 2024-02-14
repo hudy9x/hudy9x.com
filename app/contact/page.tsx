@@ -8,9 +8,9 @@ const socials = [
   {
 
     icon: <X size={20} />,
-    href: "https://twitter.com/hudy9x",
+    href: "https://twitter.com/hudy09",
     label: "Twitter",
-    handle: "@hudy9x",
+    handle: "@hudy09",
   },
   {
     icon: <Mail size={20} />,
