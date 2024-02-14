@@ -13,7 +13,7 @@ const words = 'hudy9x'.split('')
 export default function Home() {
   return (
     <div className="flex flex-col items-center justify-center w-screen h-screen overflow-hidden bg-gradient-to-tl from-black via-zinc-600/20 to-black">
-      <Image className="rounded-full grayscale transition-all duration-700 hover:grayscale-0 animate-fade-in" src={'https://avatars.githubusercontent.com/u/95471659?v=4'} alt="Hudy9x" width={100} height={100} />
+      <Image className="rounded-full w-[70px] h-[70px] sm:w-[100px] sm:h-[100px] grayscale transition-all duration-700 hover:grayscale-0 animate-fade-in" src={'https://avatars.githubusercontent.com/u/95471659?v=4'} alt="Hudy9x" width={100} height={100} />
       <nav className="my-16 animate-fade-in">
         <ul className="flex items-center justify-center gap-4">
           {navigation.map((item) => (
