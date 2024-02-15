@@ -6,7 +6,7 @@ const icon = {
   hidden: {
     opacity: 0,
     pathLength: 0,
-    transform: "scale(1.5)",
+    transform: "scale(2.5)",
     fill: "rgba(255, 255, 255, 0)",
     stroke: "rgba(255, 255, 255, 0)",
   },
@@ -20,7 +20,7 @@ const icon = {
 };
 
 export const BrandName = () => {
-  const duration = 2;
+  const duration = 3.7;
   return (
     <div className=" w-[200px] h-[50px] sm:w-[300px] sm:h-[100px]">
       <motion.svg
