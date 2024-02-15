@@ -28,7 +28,7 @@ export const BrandName = () => {
         height={"100%"}
         width={"100%"}
         viewBox="0 0 987 281"
-        className="item"
+        className="brand-name"
       >
         {/* h */}
         <motion.path
