@@ -1,12 +1,19 @@
 "use client";
-import { Facebook, Github, Linkedin, Mail, Twitter, X, Youtube } from "lucide-react";
+import {
+  Facebook,
+  Github,
+  Linkedin,
+  Mail,
+  Twitter,
+  X,
+  Youtube,
+} from "lucide-react";
 import Link from "next/link";
 import { Navigation } from "../components/Nav";
 import { Card } from "../components/Card";
 
 const socials = [
   {
-
     icon: <X size={20} />,
     href: "https://twitter.com/hudy09",
     label: "Twitter",
@@ -20,9 +27,9 @@ const socials = [
   },
   {
     icon: <Mail size={20} />,
-    href: "mailto:hudy9x@gmail.com",
+    href: "mailto:hi@hudy9x.com",
     label: "Email",
-    handle: "hudy9x@gmail.com",
+    handle: "hi@hudy9x.com",
   },
   {
     icon: <Github size={20} />,
@@ -80,4 +87,3 @@ export default function Contact() {
     </div>
   );
 }
-
