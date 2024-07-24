@@ -18,30 +18,28 @@ export default function Navigation() {
       </DockIcon>
       <Separator />
       <DockIcon>
-        <Link href={'#about '}>
+        <Link target="_blank" href={'https://github.com/hudy9x'}>
           <GithubIcon size={20} />
         </Link>
       </DockIcon>
       <DockIcon>
-        <Link href={'#about '}>
+        <Link target="_blank" href={'https://www.linkedin.com/in/hudy9x/'}>
           <LinkedinIcon size={20} />
         </Link>
       </DockIcon>
       <DockIcon>
-        <Link href={'#about '}>
+        <Link target="_blank" href={'https://x.com/hudy09'}>
           <TwitterIcon size={20} />
         </Link>
       </DockIcon>
       <DockIcon>
-        <Link href={'#about '}>
+        <Link target="_blank" href={'https://www.youtube.com/@hudy9x'}>
           <YoutubeIcon size={20} />
         </Link>
       </DockIcon>
       <Separator />
       <DockIcon>
-        <Link href={'#about '}>
-          <SunIcon size={20} />
-        </Link>
+        <SunIcon size={20} />
       </DockIcon>
     </Dock>
   </div>
