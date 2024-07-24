@@ -1,0 +1,98 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* --foreground-rgb: 0, 0, 0; */
+  /* --background-rgb: 255, 255, 255; */
+    --foreground-rgb: 255, 255, 255;
+    --background-rgb: 0, 0, 0;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* --foreground-rgb: 255, 255, 255; */
+    /* --background-rgb: 0, 0, 0; */
+  --foreground-rgb: 0, 0, 0;
+  --background-rgb: 255, 255, 255;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: rgb(var(--background-rgb));
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  /* .section { */
+  /*   @apply sm:w-[500px] mx-auto mt-[40px]; */
+  /* } */
+  /**/
+  /**/
+  /* .section-large { */
+  /*   @apply sm:w-[700px] mx-auto mt-[40px]; */
+  /* } */
+
+  .heading-color {
+    color: #000;
+  }
+
+  .para {
+    color: #434343;
+  }
+}
+
+@layer components {
+  .section {
+    @apply sm:w-[500px] mx-auto mt-[40px];
+  }
+
+
+  .section-large {
+    @apply sm:w-[700px] mx-auto mt-[40px];
+  }
+  .btn {
+    @apply px-1.5 py-0.5 border rounded-md bg-zinc-50 text-zinc-600 text-xs font-normal;
+  }
+
+  .btn.dark {
+    @apply bg-zinc-900 text-white border-zinc-900;
+  }
+
+  .link {
+    @apply text-blue-400 hover:underline transition-all
+  }
+}
+
+h1, h2, h3 {
+  @apply pb-3;
+}
+
+h1{
+  @apply text-4xl font-bold;
+}
+
+h2 {
+  @apply text-3xl font-semibold;
+}
+
+h3 {
+  @apply text-xl font-bold
+}
+
+h4 {
+  @apply text-base font-bold leading-3 text-zinc-700;
+}
+
+p {
+  @apply text-zinc-600 leading-6;
+}
+
+small {
+  @apply text-xs text-zinc-400;
+}
+
