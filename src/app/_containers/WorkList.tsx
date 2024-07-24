@@ -1,5 +1,6 @@
 import { Calendar, Github, Globe } from "lucide-react"
 import Link from "next/link"
+import Languages from "./Languages"
 
 function WorkInfo({ title, type, link = false }: { title: string, type: 'duration' | 'website' | 'github', link?: boolean }) {
   const getLink = () => {
@@ -12,11 +13,11 @@ function WorkInfo({ title, type, link = false }: { title: string, type: 'duratio
     return ''
   }
   return <div className="flex items-center gap-1.5 text-zinc-500 text-xs">
-    {type === 'duration' ? <Calendar size={15} />
+    {type === 'duration' ? <Calendar className="p-0.5 rounded bg-green-100 text-green-500" size={15} />
       : null}
-    {type === 'github' ? <Github size={15} />
+    {type === 'github' ? <Github className="p-0.5 rounded bg-orange-100 text-orange-500" size={15} />
       : null}
-    {type === 'website' ? <Globe size={15} />
+    {type === 'website' ? <Globe className="p-0.5 rounded bg-blue-100 text-blue-500" size={15} />
       : null}
     <div className="truncate">
 
@@ -52,7 +53,8 @@ export default function WorkList() {
           </div>
         </header>
         <section className="section mt-[20px]">
-          <p className="text-sm">{work.desc}</p>
+          <p className="para-sm">{work.desc}</p>
+          <Languages link={work.techstacks} />
         </section>
       </div>
     })}

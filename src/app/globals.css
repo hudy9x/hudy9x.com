@@ -44,6 +44,10 @@ body {
   .para {
     color: #434343;
   }
+
+  .para-sm {
+    @apply text-[0.875rem] leading-6
+  }
 }
 
 @layer components {
@@ -64,7 +68,7 @@ body {
   }
 
   .link {
-    @apply text-blue-400 hover:underline transition-all
+    @apply text-blue-500 hover:underline transition-all
   }
 }
 
@@ -89,7 +93,7 @@ h4 {
 }
 
 p {
-  @apply text-zinc-600 leading-6;
+  @apply text-zinc-600 leading-7;
 }
 
 small {

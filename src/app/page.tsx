@@ -7,6 +7,7 @@ import Mywork from "./_containers/Mywork";
 import Skills from "./_containers/Skills";
 import WorkExperience from "./_containers/WorkExperience";
 import WorkList from "./_containers/WorkList";
+import Navigation from "./_containers/Navigation";
 
 export default function Home() {
   return (
@@ -18,22 +19,7 @@ export default function Home() {
       <Mywork />
       <WorkList />
       <GetInTouch />
-      <div className="fixed bottom-4 left-1/2 -translate-x-1/2">
-        <Dock direction="middle">
-          <DockIcon>
-            <Github size={24} />
-          </DockIcon>
-          <DockIcon>
-            <Github size={24} />
-          </DockIcon>
-          <DockIcon>
-            <Github size={24} />
-          </DockIcon>
-          <DockIcon>
-            <Github size={24} />
-          </DockIcon>
-        </Dock>
-      </div>
+      <Navigation />
     </main>
   );
 }
