@@ -6,7 +6,7 @@ export default function Header() {
         building things and sharing knowledges. Very active on X, Discord.</p>
     </div>
 
-    <img src="/avatar.png" className="w-24 h-24 rounded-full shadow" />
+    <img src="/avatar.png" className="w-16 h-16 sm:w-24 sm:h-24 rounded-full shadow" />
 
   </header>
 }

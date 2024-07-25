@@ -16,7 +16,7 @@ export default async function Languages({ link }: { link: string }) {
 
   const languages = Object.keys(data)
   console.log(languages)
-  return <div className="flex items-center gap-2 mt-3">{
+  return <div className="flex flex-wrap sm:flex-nowrap items-center gap-2 mt-3">{
     languages.map(lang => {
       return <button key={lang} className="btn lowercase">{lang}</button>
     })
