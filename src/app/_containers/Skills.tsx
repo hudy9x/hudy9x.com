@@ -6,7 +6,7 @@ export default function Skills() {
     <h3>Skills</h3>
     <div className="flex items-center gap-2">
       {skills.map(skill => {
-        return <button className="btn dark">{skill}</button>
+        return <button key={skill} className="btn dark">{skill}</button>
       })}
     </div>
   </section>

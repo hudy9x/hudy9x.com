@@ -7,12 +7,12 @@ export default function Navigation() {
   return <div className="fixed bottom-8 left-1/2 -translate-x-1/2 text-zinc-500">
     <Dock direction="middle">
       <DockIcon>
-        <Link href={'#about '}>
+        <Link href={'#about'}>
           <HomeIcon size={20} />
         </Link>
       </DockIcon>
       <DockIcon>
-        <Link href={'#about '}>
+        <Link href={'#work'}>
           <CodeIcon size={20} />
         </Link>
       </DockIcon>

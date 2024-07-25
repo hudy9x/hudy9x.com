@@ -1,5 +1,3 @@
-import { Github } from "lucide-react";
-import { Dock, DockIcon } from "./_components/Dock";
 import About from "./_containers/About";
 import GetInTouch from "./_containers/GetInTouch";
 import Header from "./_containers/Header";

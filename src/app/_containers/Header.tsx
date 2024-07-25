@@ -1,5 +1,5 @@
 export default function Header() {
-  return <header className="section flex items-start gap-7">
+  return <header id="about" className="section flex items-start gap-7">
     <div>
       <h1>Hi, I am Hudy</h1>
       <p>Web Developer turned Indie Hacker. I love

@@ -5,7 +5,14 @@ export default async function Languages({ link }: { link: string }) {
     }
   })
   const data = await res.json()
+
   if (!data) return null
+
+  console.log('language data', data)
+  if (data.status === '401') {
+    console.log('Fetch languages error:', data.message)
+    return null
+  }
 
   const languages = Object.keys(data)
   console.log(languages)

@@ -23,6 +23,10 @@ body {
   background: rgb(var(--background-rgb));
 }
 
+html, body {
+  scroll-behavior: smooth;
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
@@ -52,12 +56,12 @@ body {
 
 @layer components {
   .section {
-    @apply sm:w-[500px] mx-auto mt-[40px];
+    @apply sm:w-[500px] mx-auto pt-[40px];
   }
 
 
   .section-large {
-    @apply sm:w-[700px] mx-auto mt-[40px];
+    @apply sm:w-[700px] mx-auto pt-[40px];
   }
   .btn {
     @apply px-1.5 py-0.5 border rounded-md bg-zinc-50 text-zinc-600 text-xs font-normal;
