@@ -65,13 +65,14 @@ export default function WorkList() {
   ]
   return <section className="section-large">
     {works.map((work, workIndex) => {
-      return <div key={workIndex} className="mb-[70px]">
+      return <div key={workIndex} className="mb-[70px] relative">
         <img className="" width={700} src={work.thumb} />
+        <GithubStar link={work.star} />
         <header className="flex items-center gap-4 section pt-[10px]">
           <img className="p-1.5 rounded-full border shadow-md" src={work.logo} width={40} height={40} />
           <div className="space-y-2">
-            <h4 className="flex items-center gap-2">{work.name} <GithubStar link={work.star} /></h4>
-            <div className="flex items-center gap-3">
+            <h4 className="flex items-center gap-2">{work.name} </h4>
+            <div className="flex flex-wrap sm:flex-nowrap items-center gap-3">
               <WorkInfo type="duration" title={work.duration} />
               <WorkInfo type="website" link={true} title={work.website} />
               <WorkInfo type="github" link={true} title={work.github} />

@@ -37,10 +37,10 @@ export default function Navigation() {
           <YoutubeIcon size={20} />
         </Link>
       </DockIcon>
-      <Separator />
-      <DockIcon>
-        <SunIcon size={20} />
-      </DockIcon>
+      {/* <Separator /> */}
+      {/* <DockIcon> */}
+      {/*   <SunIcon size={20} /> */}
+      {/* </DockIcon> */}
     </Dock>
   </div>
 }

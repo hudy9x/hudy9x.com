@@ -7,6 +7,8 @@
   /* --background-rgb: 255, 255, 255; */
     --foreground-rgb: 255, 255, 255;
     --background-rgb: 0, 0, 0;
+
+
 }
 
 @media (prefers-color-scheme: dark) {
@@ -56,7 +58,7 @@ html, body {
 
 @layer components {
   .section {
-    @apply sm:w-[500px] mx-auto pt-[40px];
+    @apply px-6 sm:px-0 sm:w-[500px] mx-auto pt-[40px];
   }
 
 
