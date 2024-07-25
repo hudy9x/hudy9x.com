@@ -4,7 +4,7 @@ export default function Skills() {
   const skills = ['Next.js', 'Node.js', 'Docker', 'MongoDB', 'Typescript', 'React']
   return <section className="section">
     <h3>Skills</h3>
-    <div className="flex items-center gap-2">
+    <div className="flex flex-wrap sm:flex-nowrap items-center gap-2">
       {skills.map(skill => {
         return <button key={skill} className="btn dark">{skill}</button>
       })}

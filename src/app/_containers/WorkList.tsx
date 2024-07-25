@@ -72,13 +72,18 @@ export default function WorkList() {
           <img className="p-1.5 rounded-full border shadow-md" src={work.logo} width={40} height={40} />
           <div className="space-y-2">
             <h4 className="flex items-center gap-2">{work.name} </h4>
-            <div className="flex flex-wrap sm:flex-nowrap items-center gap-3">
+            <div className="hidden sm:flex items-center gap-3">
               <WorkInfo type="duration" title={work.duration} />
               <WorkInfo type="website" link={true} title={work.website} />
               <WorkInfo type="github" link={true} title={work.github} />
             </div>
           </div>
         </header>
+        <div className="section pt-3 flex flex-wrap sm:hidden items-center gap-3">
+          <WorkInfo type="duration" title={work.duration} />
+          <WorkInfo type="website" link={true} title={work.website} />
+          <WorkInfo type="github" link={true} title={work.github} />
+        </div>
         <section className="section pt-[20px]">
           <p className="para-sm">{work.desc}</p>
           <Languages link={work.techstacks} />
