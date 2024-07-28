@@ -106,3 +106,23 @@ small {
   @apply text-xs text-zinc-400;
 }
 
+@keyframes hideDiv {
+  0% {
+    background: rgba(255, 255, 255, 1);
+    /* opacity: 0.5; */
+    backdrop-filter: blur(20px);
+  }
+  100% {
+    /* opacity: 0; */
+    background: rgba(255, 255, 255, 0);
+    backdrop-filter: blur(0px);
+  }
+}
+
+.hide-element {
+  animation: hideDiv 2.5s forwards;
+  /* backdrop-filter: blur(20px); */
+  animation-delay: 1s;
+  pointer-events: none;
+}
+

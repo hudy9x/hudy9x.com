@@ -6,6 +6,7 @@ import Skills from "./_containers/Skills";
 import WorkExperience from "./_containers/WorkExperience";
 import WorkList from "./_containers/WorkList";
 import Navigation from "./_containers/Navigation";
+import Blurry from "./_components/Blurry";
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
       <WorkList />
       <GetInTouch />
       <Navigation />
+      <Blurry />
     </main>
   );
 }

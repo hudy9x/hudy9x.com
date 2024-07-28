@@ -5,7 +5,7 @@ export default function Header() {
       <p>Obsessed with building products that people love. Indie hacker sharing the ups, downs, and everything in between on X and Discord.</p>
     </div>
 
-    <img src="/avatar.png" className="w-16 h-16 sm:w-24 sm:h-24 rounded-full shadow" />
+    <img src="/avatar.png" className="shrink-0 w-16 h-16 sm:w-24 sm:h-24 rounded-full shadow" />
 
   </header>
 }

@@ -66,7 +66,7 @@ export default function WorkList() {
   return <section className="section-large">
     {works.map((work, workIndex) => {
       return <div key={workIndex} className="mb-[70px] relative">
-        <img className="" width={700} src={work.thumb} />
+        <img className="sm:h-[415px]" src={work.thumb} />
         <GithubStar link={work.star} />
         <header className="flex items-center gap-4 section pt-[10px]">
           <img className="p-1.5 rounded-full border shadow-md" src={work.logo} width={40} height={40} />
