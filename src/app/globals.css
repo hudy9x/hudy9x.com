@@ -120,6 +120,7 @@ small {
 }
 
 .hide-element {
+  background: rgba(255, 255, 255, 1);
   animation: hideDiv 2.5s forwards;
   /* backdrop-filter: blur(20px); */
   animation-delay: 1s;
