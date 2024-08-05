@@ -1,59 +1,102 @@
 'use client'
-import { useEffect, useRef } from "react"
+import { useEffect, useId, useRef, useState } from "react"
 
-const alphabet = '!@#$%^&*()_+qwertyuiiop[]asdfghjklzxcvbnm,./;'.split('');
-function RandomText({ text, time }: { text: string, time: number }) {
+// const alphabet = '!@#$%^&*()_+qwertyuiiop[]asdfghjklzxcvbnm,./;'.split('');
+const alphabet = '_+qwertyuiiopasdfghjklzxcvbnm,.;'.split('');
+const alphabetLen = alphabet.length
+
+function RandomText({
+  text,
+  time,
+  onHover = false,
+  trigger
+}:
+  {
+    text: string,
+    time: number,
+    onHover?: boolean,
+    trigger?: number
+  }) {
   const ref = useRef<HTMLSpanElement>(null)
-  const randomAlphabet = () => {
-    const len = alphabet.length
 
-    return alphabet[Math.round(Math.random() * len)] || 'a'
+  const id = useId()
+  const elemId = `rand-text-${id}`
+
+  const randomAlphabet = () => {
+    return alphabet[Math.round(Math.random() * alphabetLen)] || 'a'
+  }
+
+  const run = (element: HTMLSpanElement) => {
+    let start: number
+    const animate = (timestamp: number) => {
+      if (!start) {
+        start = timestamp
+      }
+
+      const elapsed = timestamp - start
+      const randText = randomAlphabet()
+      if (!randText) {
+        console.log(randText)
+      }
+      element.innerText = randText
+
+      if (elapsed < time) {
+        window.requestAnimationFrame(animate)
+        return
+      } else {
+        element.innerText = text
+      }
+    }
+
+    window.requestAnimationFrame(animate)
   }
 
   useEffect(() => {
-    const run = (element: HTMLSpanElement) => {
-      let start: number
-      const animate = (timestamp: number) => {
-        if (!start) {
-          start = timestamp
-        }
+    // make sure that effect does not run as hover config is on
+    if (onHover) return
 
-        const elapsed = timestamp - start
-        const randText = randomAlphabet()
-        if (!randText) {
-          console.log(randText)
-        }
-        element.innerText = randText
-
-        if (elapsed < time) {
-          window.requestAnimationFrame(animate)
-          return
-        } else {
-          element.innerText = text
-        }
-      }
-
-      window.requestAnimationFrame(animate)
+    const element = document.querySelector(`[id="${elemId}"]`) as HTMLSpanElement
+    if (element) {
+      run(element)
     }
+  }, [])
 
-    if (ref.current) {
-      run(ref.current)
+  useEffect(() => {
+    if (!trigger || trigger < 1) return
+
+    const element = document.querySelector(`[id="${elemId}"]`) as HTMLSpanElement
+    if (element) {
+      run(element)
     }
-  }, [ref, text, time])
-  return <span ref={ref}>{text}</span>
+  }, [trigger])
+
+  return <span id={elemId} ref={ref}>{text}</span>
 }
 
-export default function RandomTextReveal({ text, duration = 2 }: { duration?: number, text: string }) {
+export default function RandomTextReveal({ text, onHover, duration = 0.7 }: { duration?: number, text: string, onHover?: boolean }) {
 
+  const id = useId()
+  const elemId = `rand-text-container-${id}`
   const words = text.split('')
   const len = words.length
   const totalTime = duration * 1000
   const minTime = totalTime / len
+  const [trigger, setTrigger] = useState(0)
 
-
-  return <>
+  return <div
+    onTouchEnd={() => {
+      if (onHover) {
+        setTrigger(prev => prev + 1)
+      }
+    }}
+    onMouseEnter={() => {
+      if (onHover) {
+        setTrigger(prev => prev + 1)
+      }
+    }}
+    id={elemId}>
     {words.map((w, windex) => {
-      return <RandomText key={windex} text={w} time={minTime * (windex + 1)} />
+      return <RandomText key={windex} onHover={onHover} trigger={trigger} text={w} time={minTime * (windex + 1)} />
     })}
-  </>
+  </div>
 }

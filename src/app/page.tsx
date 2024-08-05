@@ -7,12 +7,10 @@ import WorkExperience from "./_containers/WorkExperience";
 import WorkList from "./_containers/WorkList";
 import Navigation from "./_containers/Navigation";
 import Blurry from "./_components/Blurry";
-import RandomTextReveal from "./_components/RandomTextReveal";
 
 export default function Home() {
   return (
     <main>
-      <h2><RandomTextReveal text="Hello world" duration={0.5} /></h2>
       <Header />
       <About />
       <WorkExperience />
@@ -21,7 +19,7 @@ export default function Home() {
       <WorkList />
       <GetInTouch />
       <Navigation />
-      {/* <Blurry /> */}
+      <Blurry />
     </main>
   );
 }

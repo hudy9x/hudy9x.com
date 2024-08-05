@@ -20,6 +20,16 @@
   }
 }
 
+::-moz-selection { /* Code for Firefox */
+  background: rgb(var(--foreground-rgb));
+  color: rgb(var(--background-rgb));
+}
+
+::selection {
+  background: rgb(var(--foreground-rgb));
+  color: rgb(var(--background-rgb));
+}
+
 body {
   color: rgb(var(--foreground-rgb));
   background: rgb(var(--background-rgb));
@@ -111,17 +121,25 @@ small {
     background: rgba(255, 255, 255, 1);
     /* opacity: 0.5; */
     backdrop-filter: blur(20px);
+    color: black;
   }
+
+  70% {
+    color: transparent;
+  }
+
   100% {
     /* opacity: 0; */
     background: rgba(255, 255, 255, 0);
     backdrop-filter: blur(0px);
+    color: transparent;
   }
 }
 
 .hide-element {
   background: rgba(255, 255, 255, 1);
   animation: hideDiv 2.5s forwards;
+  color: black;
   /* backdrop-filter: blur(20px); */
   animation-delay: 1s;
   pointer-events: none;

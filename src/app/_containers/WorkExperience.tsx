@@ -1,3 +1,5 @@
+import RandomTextReveal from "../_components/RandomTextReveal"
+
 export default function WorkExperience() {
   const workExperience = [
     { logo: '/ecomgrows.png', companyName: "Ecomgrows", position: "Technical Leader", workingTime: "June 2021 - Present" },
@@ -6,7 +8,8 @@ export default function WorkExperience() {
   ]
   return <section className="section">
     <h3 className="flex justify-between items-center">
-      <span>Work Experience</span>
+      <div><RandomTextReveal onHover={true} text="Work Experience" /></div>
+
       <button className="btn">Download CV</button>
     </h3>
     <div className="space-y-3">
