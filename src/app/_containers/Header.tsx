@@ -1,7 +1,10 @@
+import RandomTextReveal from "../_components/RandomTextReveal";
+
 export default function Header() {
   return <header id="about" className="section flex items-start gap-7">
     <div>
-      <h1>Hi, I am Hudy</h1>
+      <h1><RandomTextReveal onHover={true} text="Hi, I am Hudy" /></h1>
+
       <p>Obsessed with building products that people love. Indie hacker sharing the ups, downs, and everything in between on X and Discord.</p>
     </div>
 
