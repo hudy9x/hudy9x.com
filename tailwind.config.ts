@@ -9,6 +9,7 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
+        "solid": "rgb(var(--background-rgb))",
         "heading": "rgb(var(--heading-color))",
         "paragraph": "rgb(var(--paragraph-color))",
       },
