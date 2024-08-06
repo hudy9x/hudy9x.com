@@ -3,20 +3,21 @@
 @tailwind utilities;
 
 :root {
-  /* --foreground-rgb: 0, 0, 0; */
-  /* --background-rgb: 255, 255, 255; */
     --foreground-rgb: 255, 255, 255;
     --background-rgb: 0, 0, 0;
 
+    --heading-color: 0, 0, 0;
+    --paragraph-color: 82, 82, 91;
 
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    /* --foreground-rgb: 255, 255, 255; */
-    /* --background-rgb: 0, 0, 0; */
-  --foreground-rgb: 0, 0, 0;
-  --background-rgb: 255, 255, 255;
+    --foreground-rgb: 255, 255, 255;
+    --background-rgb: 0, 0, 0;
+
+    --heading-color: 255, 255, 255;
+    --paragraph-color: 151, 151, 160;
   }
 }
 
@@ -58,7 +59,8 @@ html, body {
   }
 
   .para {
-    color: #434343;
+    /* color: #434343; */
+    @apply text-paragraph;
   }
 
   .para-sm {
@@ -105,11 +107,11 @@ h3 {
 }
 
 h4 {
-  @apply text-base font-bold leading-3 text-zinc-700;
+  @apply text-heading text-base font-bold leading-3;
 }
 
 p {
-  @apply text-zinc-600 leading-7;
+  @apply text-paragraph leading-7;
 }
 
 small {
