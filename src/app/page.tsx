@@ -8,6 +8,8 @@ import WorkList from "./_containers/WorkList";
 import Navigation from "./_containers/Navigation";
 import Blurry from "./_components/Blurry";
 
+export const revalidate = 7200
+
 export default function Home() {
   return (
     <main>
