@@ -2,6 +2,8 @@ import { Calendar, Github, Globe, StarIcon } from "lucide-react"
 import Link from "next/link"
 import Languages from "./Languages"
 import GithubStar from "./GithubStar"
+import WorkCaptures from "./WorkCaptures"
+import WorkCaptures2 from "../_components/WorkCaptures2"
 
 function WorkInfo({ title, type, link = false }: { title: string, type: 'duration' | 'website' | 'github', link?: boolean }) {
   const getLink = () => {
@@ -31,6 +33,7 @@ export default function WorkList() {
   const works = [
     {
       thumb: '/namviek-2.png',
+      thumbs: ['/namviek-capture-1.png', '/namviek-capture-2.png', '/namviek-capture-3.png'],
       logo: '/namviek-logo.png',
       name: 'Namviek',
       duration: 'May 2023 - Present',
@@ -42,6 +45,7 @@ export default function WorkList() {
     },
     {
       thumb: '/kompad-2.png',
+      thumbs: ['/namviek-capture-1.png', '/namviek-capture-2.png', '/namviek-capture-3.png'],
       logo: '/kompad-logo.png',
       name: 'Kompad',
       duration: 'Dec 2022 - Nov 2023',
@@ -52,6 +56,7 @@ export default function WorkList() {
     },
     {
       thumb: '/keyreader.png',
+      thumbs: ['/namviek-capture-1.png', '/namviek-capture-2.png', '/namviek-capture-3.png'],
       logo: '/keyreader-logo.png',
       name: 'Keyreader',
       duration: 'Apr 2023 - May 2023',
@@ -66,7 +71,12 @@ export default function WorkList() {
   return <section className="section-large">
     {works.map((work, workIndex) => {
       return <div key={workIndex} className="mb-[70px] relative">
-        <img className="sm:h-[415px]" src={work.thumb} />
+        {/* <img className="sm:h-[415px]" src={work.thumb} /> */}
+        <WorkCaptures2 thumbs={work.thumbs} />
+        {/* <div className="flex justify-center mt-8"> */}
+        {/*   <WorkCaptures /> */}
+        {/* </div> */}
+
         <GithubStar link={work.star} />
         <header className="flex items-center gap-4 section pt-[10px]">
           <img className="p-1.5 rounded-full border shadow-md" src={work.logo} width={40} height={40} />

@@ -1,0 +1,14 @@
+.work-catures {
+  @apply relative;
+}
+
+.work-capture-item {
+  width: 600px;
+  @apply absolute top-1/2 left-1/2;
+  @apply -translate-x-1/2 -translate-y-[275px];
+}
+
+.work-capture-item img {
+  /* width: 100%; */
+  /* height: 100%; */
+}
