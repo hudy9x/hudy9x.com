@@ -45,7 +45,7 @@ export default function WorkList() {
       logo: '/kompad-logo.png',
       name: 'Kompad',
       duration: 'Dec 2022 - Nov 2023',
-      website: 'kompad.vercel.app',
+      website: 'kompad.hudy9x.com',
       github: 'hudy9x/kompad.git',
       star: 'https://api.github.com/repos/hudy9x/kompad',
       techstacks: 'https://api.github.com/repos/hudy9x/kompad/languages', desc: `A beautiful app that allows you to create, edit, synchonize your techinal document. Even custom your own look.`
@@ -55,7 +55,7 @@ export default function WorkList() {
       logo: '/keyreader-logo.png',
       name: 'Keyreader',
       duration: 'Apr 2023 - May 2023',
-      website: 'hudy9x.github.io/keyreader',
+      website: 'keyreader.hudy9x.com',
       github: 'hudy9x/keyreader',
       star: 'https://api.github.com/repos/hudy9x/keyreader',
       techstacks: 'https://api.github.com/repos/hudy9x/keyreader/languages',
