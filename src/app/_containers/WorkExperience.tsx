@@ -10,7 +10,9 @@ export default function WorkExperience() {
     <h3 className="flex justify-between items-center">
       <div><RandomTextReveal onHover={true} text="Work Experience" /></div>
 
-      <button className="btn">Download CV</button>
+      <a href="https://drive.google.com/file/d/1v_64QAyUbD9XZOpX3C5mneha3SUHu4dF/view" target="_blank">
+        <button className="btn">Download CV</button>
+      </a>
     </h3>
     <div className="space-y-3">
       {workExperience.map((work, workIndex) => {
