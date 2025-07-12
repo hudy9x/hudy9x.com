@@ -2,7 +2,8 @@ import RandomTextReveal from "../_components/RandomTextReveal"
 
 export default function WorkExperience() {
   const workExperience = [
-    { logo: '/ecomgrows.png', companyName: "Ecomgrows", position: "Technical Leader", workingTime: "June 2021 - Present" },
+    { logo: '/fpt-software.png', companyName: "FPT Software", position: "Technical Leader", workingTime: "Dec 2024 - Present" },
+    { logo: '/ecomgrows.png', companyName: "Ecomgrows", position: "Technical Leader", workingTime: "June 2021 - Dec 2024" },
     { logo: '/fpt-software.png', companyName: "FPT Software", position: "Senior Web Developer", workingTime: "May 2016 - June 2021" },
     { logo: '/1office.png', companyName: "1Office", position: "Web Developer", workingTime: "Jan 2013 - Mar 2016" },
   ]

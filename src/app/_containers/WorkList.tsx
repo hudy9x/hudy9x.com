@@ -2,6 +2,7 @@ import { Calendar, Github, Globe, StarIcon } from "lucide-react"
 import Link from "next/link"
 import Languages from "./Languages"
 import GithubStar from "./GithubStar"
+import AppFeatures from "./AppFeatures"
 
 function WorkInfo({ title, type, link = false }: { title: string, type: 'duration' | 'website' | 'github', link?: boolean }) {
   const getLink = () => {
@@ -13,6 +14,14 @@ function WorkInfo({ title, type, link = false }: { title: string, type: 'duratio
 
     return ''
   }
+
+  const getTitle = (name: string) => {
+    if (type === 'website' && name.includes('github.com')) {
+      return name.replace('github.com/', 'git:')
+    }
+    return name
+  }
+
   return <div className="flex items-center gap-1.5 text-zinc-500 text-xs">
     {type === 'duration' ? <Calendar className="p-0.5 rounded bg-green-100 text-green-500" size={15} />
       : null}
@@ -22,7 +31,7 @@ function WorkInfo({ title, type, link = false }: { title: string, type: 'duratio
       : null}
     <div className="truncate">
 
-      {link ? <Link className="hover:underline transition-all" target="_blank" href={getLink()}>{title}</Link> : title}
+      {link ? <Link className="hover:underline transition-all" target="_blank" href={getLink()}>{getTitle(title)}</Link> : title}
     </div>
   </div>
 }
@@ -30,10 +39,51 @@ function WorkInfo({ title, type, link = false }: { title: string, type: 'duratio
 export default function WorkList() {
   const works = [
     {
+      thumb: '/uml-editor.png',
+      logo: '/tauri.svg',
+      name: 'Uml Editor',
+      duration: 'July 1 2025 - July 11 2025',
+      website: 'github.com/hudy9x/uml/releases',
+      github: 'hudy9x/uml.git',
+      star: 'https://api.github.com/repos/hudy9x/uml',
+      techstacks: 'https://api.github.com/repos/hudy9x/uml/languages',
+      desc: 'A modern, intuitive desktop application for creating and editing UML diagrams with real-time rendering. Built using Tauri and React TypeScript',
+      features: [
+        'Syntax highlighted and suggestions',
+        'Preview panel with zoom in/out and dragging around',
+        'Enable export uml as file .pu and .png',
+        'Copy as an image and paste to chatbox',
+        'Realtime diagram preview',
+        'Pop out the preview window',
+        'Autoupdate using Github action pipeline',
+        '...More'
+      ]
+    },
+    {
+      thumb: '/odoflow.png',
+      logo: '/odoflow-logo.png',
+      name: 'Odoflow',
+      duration: 'May 2025 - Present',
+      website: 'github.com/hudy9x/odoflow',
+      github: 'hudy9x/odoflow.git',
+      star: 'https://api.github.com/repos/hudy9x/odoflow',
+      techstacks: 'https://api.github.com/repos/hudy9x/odoflow/languages',
+      desc: 'Your next open-source, lightweight workflow automation tool. Built on Next.js and Hono.js, offering fast, adaptable, and transparent process optimization.',
+      features: [
+        'Node connection',
+        'Quick Add',
+        'Node Debugger',
+        'Filter condition',
+        'Workflow management',
+        'Local agent connection',
+        '...More'
+      ]
+    },
+    {
       thumb: '/namviek-2.png',
       logo: '/namviek-logo.png',
       name: 'Namviek',
-      duration: 'May 2023 - Present',
+      duration: 'May 2023 - June 2025',
       website: 'namviek.com',
       github: 'hudy9x/namviek.git',
       star: 'https://api.github.com/repos/hudy9x/namviek',
@@ -65,6 +115,7 @@ export default function WorkList() {
   ]
   return <section className="section-large">
     {works.map((work, workIndex) => {
+      console.log('work', work)
       return <div key={workIndex} className="mb-[70px] relative">
         <img className="sm:h-[415px]" src={work.thumb} />
         <GithubStar link={work.star} />
@@ -87,6 +138,7 @@ export default function WorkList() {
         <section className="section pt-[20px]">
           <p className="para-sm">{work.desc}</p>
           <Languages link={work.techstacks} />
+          <AppFeatures features={work.features} />
         </section>
       </div>
     })}
