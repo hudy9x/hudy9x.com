@@ -1,4 +1,5 @@
 import About from "./_containers/About";
+import Journey from "./_containers/Journey";
 import GetInTouch from "./_containers/GetInTouch";
 import Header from "./_containers/Header";
 import Mywork from "./_containers/Mywork";
@@ -15,6 +16,7 @@ export default function Home() {
     <main>
       <Header />
       <About />
+      <Journey />
       <WorkExperience />
       <Skills />
       <Mywork />
