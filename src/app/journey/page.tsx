@@ -32,6 +32,7 @@ export default function JourneyPage() {
           <iframe src="https://clear-crow-8e0.notion.site/ebd/23dddbd574348045b955e509c131cfeb?v=23dddbd57434816bade7000c3bb33fa5" width="100%" height="600" allowFullScreen />
         </div>
 
+
         {/* <div className="mt-8 bg-white rounded-lg shadow-lg overflow-hidden">
           <h2 className="text-2xl font-bold p-6 border-b">Latest Update</h2>
           <div className="aspect-video">

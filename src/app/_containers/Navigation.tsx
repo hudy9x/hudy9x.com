@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Dock, DockIcon } from "../_components/Dock";
-import { CodeIcon, GithubIcon, HomeIcon, LinkedinIcon, SunIcon, TwitterIcon, YoutubeIcon } from "lucide-react";
+import { BookOpenIcon, CodeIcon, GithubIcon, HomeIcon, LinkedinIcon, SunIcon, TwitterIcon, YoutubeIcon } from "lucide-react";
 import Separator from "../_components/Separator";
 
 export default function Navigation() {
@@ -14,6 +14,11 @@ export default function Navigation() {
       <DockIcon>
         <Link href={'#work'}>
           <CodeIcon size={20} />
+        </Link>
+      </DockIcon>
+      <DockIcon>
+        <Link href={'/blogs'}>
+          <BookOpenIcon size={20} />
         </Link>
       </DockIcon>
       <Separator />
