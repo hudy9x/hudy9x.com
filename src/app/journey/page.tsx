@@ -10,14 +10,10 @@ export const metadata: Metadata = {
 export default function JourneyPage() {
   return (
     <main className="min-h-screen p-4 md:p-8">
-      <div className="mx-auto">
-        <div className="flex flex-wrap gap-4 mb-6">
-
-        </div>
-
+      <div className="mx-auto pb-[200px]">
         <div className="mt-8 bg-gradient-to-r flex flex-col gap-5 items-center max-w-[550px] mx-auto p-6 rounded-lg">
             <span className='text-7xl p-5 rounded-[30px] bg-red-50'>🚀</span>
-          <h2 className="text-4xl font-bold mb-4 text-gray-800">Follow My Journey!</h2>
+          <h2 className="text-4xl font-bold mb-4 text-gray-800 text-center">Follow My Journey!</h2>
           <p className="text-gray-700 text-lg mb-6 text-center">I&apos;m documenting my entire journey of making $1000 in 60 days. Follow me on social media to get daily updates, behind-the-scenes content, and valuable insights!</p>
           <SocialMediaLinks className="justify-center" />
           <Link
