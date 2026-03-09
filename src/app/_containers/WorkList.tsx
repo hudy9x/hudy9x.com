@@ -39,26 +39,23 @@ function WorkInfo({ title, type, link = false }: { title: string, type: 'duratio
 export default function WorkList() {
   const works = [
     {
-      thumb: '/uml-editor.png',
-      logo: '/tauri.svg',
-      name: 'Uml Editor',
-      duration: 'July 1 2025 - July 11 2025',
-      website: 'github.com/hudy9x/uml/releases',
-      github: 'hudy9x/uml.git',
-      star: 'https://api.github.com/repos/hudy9x/uml',
-      techstacks: 'https://api.github.com/repos/hudy9x/uml/languages',
-      desc: 'A modern, intuitive desktop application for creating and editing UML diagrams with real-time rendering. Built using Tauri and React TypeScript',
+      thumb: '/depdok.png',
+      logo: '/depdok-logo.png',
+      name: 'DepDok',
+      duration: 'Present',
+      website: 'depdok.com',
+      github: 'hudy9x/depdok-ladi',
+      star: 'https://api.github.com/repos/hudy9x/depdok-ladi',
+      techstacks: 'https://api.github.com/repos/hudy9x/depdok-ladi/languages',
+      desc: 'The lightweight, offline-first editor for developers. Manage .md, .mermaid, and .todo files with ease. Everything works offline—no cloud, no internet required.',
       features: [
-        'Syntax highlighted and suggestions',
-        'Preview panel with zoom in/out and dragging around',
-        'Enable export uml as file .pu and .png',
-        'Copy as an image and paste to chatbox',
-        'Realtime diagram preview',
-        'Pop out the preview window',
-        'Autoupdate using Github action pipeline',
-        '...More'
+        'Live markdown preview',
+        'Mermaid diagrams support',
+        'Auto-kanban boards for tasks',
+        'Privacy focused, no cloud needed'
       ]
     },
+
     {
       thumb: '/odoflow.png',
       logo: '/odoflow-logo.png',
